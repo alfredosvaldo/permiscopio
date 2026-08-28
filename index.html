@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Permiscopio: inteligencia ejecutiva para anticipar tiempos y riesgos de tramitación ambiental en Chile.">
+  <title>Permiscopio · Inteligencia para la tramitación SEIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css?v=20260828e">
+</head>
+<body>
+
+<div id="login-screen">
+  <main class="login-shell">
+    <section class="login-story" aria-labelledby="login-product-name">
+      <div class="login-story-top">
+        <div class="product-brand product-brand-light">
+          <span class="brand-symbol" aria-hidden="true"><span></span></span>
+          <div><div class="brand-name" id="login-product-name">Permiscopio</div><div class="brand-tag">Inteligencia para la tramitación SEIA</div></div>
+        </div>
+        <span class="pilot-badge pilot-badge-light">Piloto · datos ilustrativos</span>
+      </div>
+      <div class="login-message">
+        <p class="eyebrow">Decisiones con contexto</p>
+        <h1>Anticipa plazos.<br>Detecta exposición.</h1>
+        <p>Compara cada proyecto con evidencia histórica del SEIA y concentra la atención donde el tiempo importa más.</p>
+        <dl class="login-proof">
+          <div><dt>26.345</dt><dd>expedientes en la base histórica</dd></div>
+          <div><dt>1993–2026</dt><dd>cobertura para construir benchmarks</dd></div>
+        </dl>
+      </div>
+      <div class="institution-lockup"><img src="assets/fen-otei.png" alt="FEN Universidad de Chile · Observatorio de Tramitación y Evaluación de Inversiones"></div>
+    </section>
+    <section class="login-access" aria-labelledby="login-heading">
+      <div class="login-form-wrap">
+        <div class="login-mobile-brand product-brand"><span class="brand-symbol" aria-hidden="true"><span></span></span><div class="brand-name">Permiscopio</div></div>
+        <p class="login-kicker">Acceso privado</p>
+        <h2 id="login-heading">Bienvenido al piloto</h2>
+        <p class="login-sub">Explora la cartera, compara plazos y revisa expedientes de demostración.</p>
+        <form id="login-form">
+          <div class="field"><label for="email">Correo</label><input id="email" type="email" value="jorge@ejemplo.cl" autocomplete="email" required></div>
+          <div class="field"><label for="pass">Contraseña</label><input id="pass" type="password" value="demo2026" autocomplete="current-password" required></div>
+          <button class="btn btn-primary" type="submit">Entrar al piloto <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="login-demo"><span aria-hidden="true">●</span> Acceso de demostración. Las credenciales ya están completadas.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="app">
+  <aside class="sidebar" aria-label="Navegación principal">
+    <div class="sidebar-head">
+      <div class="product-brand"><span class="brand-symbol" aria-hidden="true"><span></span></span><div><div class="brand-name">Permiscopio</div><div class="brand-tag">FEN · OTEI</div></div></div>
+      <span class="pilot-badge">Piloto</span>
+      <button class="mobile-logout" id="mobile-logout-btn" type="button">Salir</button>
+    </div>
+    <nav class="navlist" aria-label="Secciones">
+      <button class="navlink active" data-view="resumen" aria-current="page"><span class="nav-index">01</span><span>Resumen</span></button>
+      <button class="navlink" data-view="proyectos"><span class="nav-index">02</span><span>Proyectos</span></button>
+      <button class="navlink" data-view="analisis"><span class="nav-index">03</span><span>Análisis</span></button>
+      <button class="navlink" data-view="documentos"><span class="nav-index">04</span><span>Documentos</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="status-dot" aria-hidden="true"></span><span>Datos ilustrativos<br><small>Actualizado hoy</small></span></div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="user-avatar" id="user-avatar">J</div><div><div class="user-name" id="user-name">Jorge</div><div class="user-role">Cuenta demo</div></div></div>
+      <button class="logout" id="logout-btn">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="view active" id="view-resumen" aria-labelledby="resumen-title">
+      <header class="page-header">
+        <div><p class="eyebrow">Cartera activa · SEIA</p><h1 id="resumen-title">Resumen ejecutivo</h1><p class="page-sub">Una lectura rápida del volumen, los plazos y la exposición de la cartera.</p></div>
+        <label class="search-box" for="search-resumen"><span class="search-icon" aria-hidden="true"></span><span class="sr-only">Buscar proyecto o titular</span><input placeholder="Buscar proyecto o titular" id="search-resumen"></label>
+      </header>
+      <section class="executive-signal" aria-labelledby="signal-title">
+        <div class="signal-main"><p class="metric-label" id="signal-title">Inversión actualmente en evaluación</p><div class="signal-value" id="kpi-inv">—</div><p class="signal-caption">Suma de la inversión declarada en proyectos activos.</p></div>
+        <div class="signal-insight"><span class="insight-label">Señal prioritaria</span><strong id="signal-risk">—</strong><p>de los proyectos activos ya supera la mediana de plazo de su sector.</p><button class="text-action" type="button" data-go-view="analisis">Revisar exposición <span aria-hidden="true">→</span></button></div>
+      </section>
+      <div class="kpis" aria-label="Indicadores de cartera">
+        <article class="kpi"><div class="metric-label">Proyectos en cartera</div><div class="metric-value" id="kpi-count">—</div><div class="delta" id="kpi-count-delta"></div></article>
+        <article class="kpi"><div class="metric-label">Tramitación promedio</div><div class="metric-value" id="kpi-dias">—</div><div class="delta" id="kpi-dias-delta"></div></article>
+        <article class="kpi"><div class="metric-label">Sobre benchmark sectorial</div><div class="metric-value" id="kpi-sobre">—</div><div class="delta" id="kpi-sobre-delta"></div></article>
+      </div>
+      <div class="analysis-grid">
+        <article class="data-section data-section-wide"><header class="section-head"><div><p class="section-kicker">Evolución</p><h2>Días de tramitación promedio</h2><p>Aprobados y rechazados, por trimestre.</p></div><div class="chart-note"><span></span>Ley 21.770</div></header><div class="chart-wrap" data-chart="trend"><canvas id="chart-trend" aria-label="Evolución trimestral de días de tramitación"></canvas></div></article>
+        <article class="data-section"><header class="section-head"><div><p class="section-kicker">Composición</p><h2>Proyectos por sector</h2><p>Cartera completa del piloto.</p></div></header><div class="chart-wrap" data-chart="sector"><canvas id="chart-sector" aria-label="Cantidad de proyectos por sector"></canvas></div></article>
+      </div>
+      <section class="data-section recent-section"><header class="section-head"><div><p class="section-kicker">Actividad reciente</p><h2>Nuevos ingresos</h2><p>Últimos proyectos presentados al SEIA.</p></div><button class="text-action" type="button" data-go-view="proyectos">Ver cartera completa <span aria-hidden="true">→</span></button></header><div class="feed" id="feed-nuevos"></div></section>
+    </section>
+
+    <section class="view" id="view-proyectos" aria-labelledby="proyectos-title">
+      <header class="page-header"><div><p class="eyebrow">Cartera</p><h1 id="proyectos-title">Proyectos</h1><p class="page-sub">Compara plazos individuales con la mediana histórica de cada sector.</p></div><label class="search-box" for="search-proyectos"><span class="search-icon" aria-hidden="true"></span><span class="sr-only">Buscar proyecto o titular</span><input placeholder="Buscar proyecto o titular" id="search-proyectos"></label></header>
+      <div class="filter-bar"><div class="filters" aria-label="Filtros de proyectos">
+        <label><span class="sr-only">Región</span><select id="f-region"><option value="">Todas las regiones</option></select></label>
+        <label><span class="sr-only">Sector</span><select id="f-sector"><option value="">Todos los sectores</option></select></label>
+        <label><span class="sr-only">Estado</span><select id="f-estado"><option value="">Todos los estados</option></select></label>
+        <label><span class="sr-only">Tipo de evaluación</span><select id="f-tipo"><option value="">DIA y EIA</option></select></label>
+      </div><button class="reset-filters" id="reset-filters" type="button">Limpiar filtros</button></div>
+      <div class="results-meta"><strong id="results-count">42 proyectos</strong><span>Selecciona un proyecto para revisar su expediente.</span></div>
+      <div class="table-wrap"><table class="project-table"><thead><tr><th>Proyecto</th><th>Región</th><th>Sector</th><th>Tipo</th><th>Ingreso</th><th>Estado</th><th>Plazo</th><th>Inversión</th></tr></thead><tbody id="tbody-proyectos"></tbody></table></div>
+    </section>
+
+    <section class="view" id="view-analisis" aria-labelledby="analisis-title">
+      <header class="page-header"><div><p class="eyebrow">Benchmark histórico</p><h1 id="analisis-title">Análisis de exposición</h1><p class="page-sub">Identifica dónde los plazos exceden el comportamiento típico del sector.</p></div></header>
+      <section class="risk-callout"><div><p class="section-kicker">Principal foco de gestión</p><h2 id="risk-project-name">—</h2><p id="risk-project-copy">Calculando la mayor exposición de la cartera activa.</p></div><div class="risk-number"><strong id="risk-project-days">—</strong><span>días sobre la mediana</span></div></section>
+      <section class="data-section priority-section"><header class="section-head"><div><p class="section-kicker">Exposición</p><h2>Proyectos con mayor exceso de plazo</h2><p>Expedientes activos ordenados por días sobre su benchmark sectorial.</p></div></header><div class="table-wrap table-wrap-inner"><table class="risk-table"><thead><tr><th>Proyecto</th><th>Sector</th><th>Plazo actual</th><th>Mediana sector</th><th>Exceso</th><th>Inversión</th></tr></thead><tbody id="tbody-exceso"></tbody></table></div></section>
+      <div class="analysis-grid analysis-grid-even">
+        <article class="data-section"><header class="section-head"><div><p class="section-kicker">Comparación</p><h2>Mediana por sector</h2><p>Histórico 1993–2026 · 26.345 proyectos.</p></div></header><div class="table-compact"><table class="sector-table" id="table-sector"></table></div></article>
+        <article class="data-section"><header class="section-head"><div><p class="section-kicker">Capital expuesto</p><h2>Inversión activa por región</h2><p>Proyectos actualmente en evaluación.</p></div></header><div class="chart-wrap" data-chart="region"><canvas id="chart-region" aria-label="Inversión activa por región"></canvas></div></article>
+      </div>
+    </section>
+
+    <section class="view" id="view-documentos" aria-labelledby="documentos-title">
+      <header class="page-header"><div><p class="eyebrow">Revisión transversal</p><h1 id="documentos-title">Consulta documental</h1><p class="page-sub">Pregunta sobre todas las carpetas del piloto y levanta señales de riesgo con respaldo documental.</p></div><span class="corpus-status"><span class="status-dot" aria-hidden="true"></span><span id="corpus-count">Indexando expedientes</span></span></header>
+
+      <section class="document-signal" aria-label="Estado documental de la cartera">
+        <article><span class="metric-label">Carpetas revisadas</span><strong id="docs-folders">—</strong><small>cobertura completa del piloto</small></article>
+        <article><span class="metric-label">Señales de riesgo IRE</span><strong id="docs-ire">—</strong><small>requieren revisión experta</small></article>
+        <article><span class="metric-label">ICE disponibles</span><strong id="docs-ice">—</strong><small>identificados en la carpeta</small></article>
+      </section>
+
+      <div class="document-layout">
+        <section class="portfolio-assistant" aria-labelledby="portfolio-assistant-title">
+          <header><p class="section-kicker">Asistente de cartera</p><h2 id="portfolio-assistant-title">Pregunta a todas las carpetas</h2><p>Las respuestas cruzan proyectos, hitos, documentos y benchmarks del piloto.</p></header>
+          <div class="scope-row"><span>Alcance</span><strong>42 expedientes · todos los documentos</strong></div>
+          <div class="portfolio-chips" id="portfolio-chips">
+            <button type="button" data-question="¿Qué proyectos tienen mayor riesgo de IRE?">Mayor riesgo de IRE</button>
+            <button type="button" data-question="¿Qué proyectos tienen ICE disponible?">Estado de los ICE</button>
+            <button type="button" data-question="Resume las principales alertas de la cartera">Alertas principales</button>
+          </div>
+          <div class="portfolio-answer" id="portfolio-answer" aria-live="polite">
+            <p class="answer-empty">Haz una pregunta para obtener una respuesta trazable a las carpetas revisadas.</p>
+          </div>
+          <form class="portfolio-form" id="portfolio-form">
+            <label class="sr-only" for="portfolio-input">Pregunta sobre todas las carpetas</label>
+            <input id="portfolio-input" type="text" placeholder="Ej.: ¿Qué expedientes presentan falta de información esencial?" autocomplete="off">
+            <button class="btn btn-primary" type="submit">Consultar</button>
+          </form>
+          <p class="assistant-disclosure">Análisis ilustrativo. Una señal no constituye una decisión de IRE ni reemplaza la revisión jurídica o técnica del expediente oficial.</p>
+        </section>
+
+        <aside class="term-card" aria-labelledby="ire-definition-title">
+          <p class="section-kicker">Criterio de lectura</p><h2 id="ire-definition-title">¿Qué significa IRE?</h2>
+          <p>En este piloto, IRE se refiere al término anticipado de una DIA o EIA por falta de información relevante o esencial que impide una evaluación ambiental adecuada en etapa temprana.</p>
+          <dl><div><dt>Información relevante</dt><dd>Permite comprender el proyecto como una unidad, incluidas sus partes, obras, acciones y etapas.</dd></div><div><dt>Información esencial</dt><dd>Permite evaluar los efectos del artículo 11 y, en un EIA, la idoneidad de medidas y seguimiento.</dd></div></dl>
+          <a href="https://www.sea.gob.cl/noticias/directora-del-sea-se-refirio-al-termino-anticipado-en-la-evaluacion-ambiental-de-proyectos" target="_blank" rel="noreferrer">Ver definición del SEA <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+
+      <section class="data-section alert-section"><header class="section-head"><div><p class="section-kicker">Bandeja priorizada</p><h2>Alertas documentales</h2><p>Señales explicables para orientar la revisión, no conclusiones automáticas.</p></div><div class="alert-legend"><span class="alert-dot high"></span>Alta <span class="alert-dot medium"></span>Media</div></header><div class="document-alerts" id="document-alerts"></div></section>
+    </section>
+  </main>
+</div>
+
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+<aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="drawer-nombre">
+  <div class="drawer-head"><div><div class="drawer-folio mono" id="drawer-folio">EXPEDIENTE</div><div class="drawer-context">Vista ejecutiva del proyecto</div></div><button class="drawer-close" id="drawer-close" type="button" aria-label="Cerrar expediente">×</button></div>
+  <div class="drawer-body">
+    <div class="drawer-title-row"><div><h2 id="drawer-nombre">—</h2><div class="drawer-titular" id="drawer-titular">—</div></div><div id="drawer-estado"></div></div>
+    <div class="drawer-summary" id="drawer-summary"></div>
+    <div class="drawer-meta" id="drawer-meta"></div>
+    <div id="drawer-doc-signal"></div>
+    <h3 class="drawer-subhead">Avance de tramitación</h3><div class="mini-timeline" id="drawer-timeline"></div>
+    <div class="drawer-rule"></div>
+    <h3 class="drawer-subhead">Consultar este expediente</h3><p class="chat-hint">Respuestas simuladas con los datos visibles del piloto; no reemplazan el expediente oficial.</p>
+    <div class="chips" id="chat-chips"></div><div class="chat-thread" id="chat-thread" aria-live="polite"></div>
+    <form class="chat-input-row" id="chat-form"><label class="sr-only" for="chat-input">Pregunta sobre el expediente</label><input id="chat-input" type="text" placeholder="Pregunta por plazo, inversión o benchmark" autocomplete="off"><button class="btn btn-send" id="chat-send" type="submit" disabled>Preguntar</button></form>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="data.js?v=20260828e"></script>
+<script src="app.js?v=20260828e"></script>
+</body>
+</html>
